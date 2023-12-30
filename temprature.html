@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>EEI3346 LAB Test 04 WE</title>
+  <script src="logics.js"></script>
+</head>
+
+<body>
+  <div>
+    <h1 style="text-align : center;">Temperature Converter</h1>
+  </div>
+  <div style="text-align : center; border : 1px solid black; width : 30%; margin-left :35%;">
+
+              <p id="display" style= "background-color : gray; height : 50px;" ></p>
+
+              <select id="selection" onchange="display()">
+                <option value="0">Select</option>
+                <option value="Fahrenheit_to_Celsius">Fahrenheit_to_Celsius</option>
+                <option value="Celsius_to_Fahrenheit">Celsius_to_Fahrenheit</option>
+              </select><br><br>
+              
+              <input type="number" id="temperature" oninput="f2c(this.value)"><br><br>
+
+              <button onclick="calc()">Convert</button>
+              <button onclick="clearAll()">Clear</button>
+
+              <script type="text/javascript">
+                
+                if (calc() >= 0) {
+                  document.getElementById("display").style.backgroundColor = "green"
+                }
+                else {
+                  document.getElementById("display").style.backgroundColor = "red"
+                }
+              </script>
+
+
+            </div>
+
+</body>
+</html>
